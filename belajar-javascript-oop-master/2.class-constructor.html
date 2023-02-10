@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Class Constructor</title>
+  </head>
+  <body>
+    <script>
+  // Sejak EcmaScript versi 6, diperkenalkan kata kunci baru, yaitu class, 
+  // ini merupakan kata kunci yang digunakan untuk membuat class di JavaScript
+  // Dengan kata kunci class, kita tidak perlu lagi menggunakan constructor function untuk membuat class
+  // Class Mirip seperti constructor function
+
+      class Person {
+        constructor(name) {
+          // kode apapun
+          console.info(`Membuat Person ${name}`);
+        }
+      }
+
+      const eko = new Person("Eko");
+      console.info(eko);
+
+      const budi = new Person("Budi");
+
+    // Karena bentuk constructor function mirip dengan function, jadi kita bisa menambah 
+    // parameter pada constructor function, lantas bagaimana dengan class?
+    // Di class juga kita bisa menambah constructor, dimana dengan menggunakan constructor, 
+    // kita juga bisa menambah parameter saat pertama kali membuat object nya
+    // Untuk membuat constructor di class, kita bisa menggunakan kata kunci constructor
+
+    </script>
+  </body>
+</html>

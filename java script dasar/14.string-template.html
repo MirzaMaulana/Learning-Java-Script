@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Template</title>
+</head>
+<body>
+<script>
+    // Untuk menambahkan string dengan data lain biasanya menggunakan operator + (Plus)
+
+    // Namun akan menyulitkan jika menggunakan operator ini dalam jumlah banyak
+
+    // Java script memiliki fitur String templete digunakan untuk mensubstitusi data dari luar string,Seperti mengambil data variable atau bahkan operasi matematika
+
+    // untuk menambahkannya kita perlua menggunakan `(backtick) bukan petik
+    
+    const name = "Eko Kurniawan Khannedy";
+    const firstName = "Eko";
+    const middleName = "Kurniawan";
+    const lastName = "Khannedy";
+    const template = `Name : ${firstName} ${middleName} ${lastName}`;
+    const lama = "Name : " + firstName + " " + middleName + " " + lastName;
+
+    console.info(template);
+
+    const nilai = 50;
+    const template2 = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+    console.info(template2);
+
+    const multiline = `Nama Saya Eko,
+Sekarang Kerja,
+Sering Juga Bikin KOnten Programming,
+Kalo lagi males, paling tidur`;
+
+    document.writeln("<pre>")
+    document.writeln(multiline);
+    document.writeln("</pre>")
+
+</script>
+</body>
+</html>

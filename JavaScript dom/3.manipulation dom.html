@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>belajar dom coy</h1>
+    <p id="name">Langkah-langkah memasak air</p>
+    <ol id="daftar">
+      <li id="awal">Masukkan air ke dalam wadah.</li>
+      <li id="akhir">Matikan kompor.</li>
+      <li>Selamat Menikmati</li>
+    </ol>
+    <hr size="2" width="95%" color="black" />
+    <script>
+      //membuat elemen baru
+      const newElement = document.createElement("p");
+      const teksElement = document.createTextNode("Hello World");
+      //menambahkan element
+      newElement.appendChild(teksElement);
+      //menyimpan element kedalam body
+      const body = document.body;
+      body.appendChild(newElement);
+      // menggunakan insertbefore
+      const elementAwal = document.createElement("li");
+      elementAwal.innerText = "Hidupkan kompor.";
+      const itemAwal = document.getElementById("awal");
+      daftar.insertBefore(elementAwal, itemAwal);
+    </script>
+  </body>
+</html>
+<!-- Manipulasi Node Lama-->
+<script>
+  // document.createElement();
+  // document.createTextNode();
+  // document.appendChild();
+  // document.insertBefore();
+  // document.removeChild();
+  // document.replaceChild();
+</script>
+<!-- Manipulasi Node Baru -->
+<script>
+  // document.append();
+  // document.prepend();
+  // childNode.before();
+  // childNode.after();
+  // childNode.remove();
+  // childNode.replaceWith();
+</script>

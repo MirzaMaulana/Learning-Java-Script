@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Function Arrow</title>
+  </head>
+  <body>
+    <script>
+      // Arrow function adalah alternatif pembuatan function yang lebih sederhana dari function biasanya
+      // Namun terdapat limitasi dan juga tidak bisa digunakan di semua situasi
+      // Dinamakan arrow function karena menggunakan tanda => (seperti panah)
+      // // Berikut contoh beberapa kekurangan arrow function :
+      // tidak memiliki fitur arguments object
+      // tidak bisa menggunakan function generator
+      // tidak bisa mengakses this (yang nanti akan dibahas di function di object)
+      // tidak bisa mengakses super (yang nanti akan dibahas di JavaScript Object Oriented Programming)
+
+      // const sayHello = (name) => {
+      //     const say = `Hello ${name}`;
+      //     console.info(say);
+      // }
+
+      // const sayHello = (name) => console.info(`Hello ${name}`);
+
+      const sayHello = (name) => console.info(`Hello ${name}`); //arrow function tanpa blok
+      // Jika sebuah arrow function isinya sederhana, misal hanya satu baris
+      // Kita bisa membuat arrow function tanpa harus menggunakan block
+
+      sayHello("Eko");
+
+      // const sum = (first, second) => {
+      //     return first + second;
+      // }
+
+      // arrow function return value
+      // Arrow function bisa mengembalikan value, sama seperti function biasanya
+      // Jika menggunakan block, maka kita perlu menggunakan kata kunci return
+      // Jika tidak menggunakan block, kita tidak perlu menggunakan kata kunci return
+
+      const sum = (first, second) => first + second;
+
+      console.info(sum(100, 100));
+
+      function giveMeName(callback) {
+        callback("Eko");
+      }
+
+      // Anonymous Function
+      // giveMeName(function (name) {
+      //     console.info(`Hello ${name}`);
+      // })
+
+      // Arrow Function tanpa kurung parameter
+      giveMeName((name) => console.info(`Hello ${name}`));
+    </script>
+  </body>
+</html>
+<!-- Karena arrow function sama seperti anonymous function -->
+<!-- Jadi kita juga bisa menggunakan arrow function sebagai parameter di function lain -->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation</title>
+  </head>
+  <body>
+    <p id="tittle">Hello World</p>
+    <img id="gambar" src="https://picsum.photos/200/300?random=2" alt="" />
+    <script>
+      // Element Manipulation
+      const Element = document.getElementById("tittle");
+      Element.innerHTML = "Hallo <b>Dunia</b>";
+      Element.innerText = "Hai Semua";
+      Element.style.color = "red";
+
+      //   setAttribute
+      const image = document.getElementById("gambar");
+      image.setAttribute("widht", 500);
+      image.removeAttribute("alt");
+      image.setAttribute("height", 500);
+      //   menambahkan class baru
+      document.querySelector("p").classList.add("judul");
+    </script>
+  </body>
+</html>

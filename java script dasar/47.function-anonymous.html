@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Function Anonymous</title>
+  </head>
+  <body>
+    <script>
+      // Sebelumnya kita selalu membuat function dengan nama
+      // Kita juga bisa membuat function tanpa nama function, atau istilahnya adalah anonymous function
+      // Kita bisa buat anonymous function dalam sebuah variable atau bisa juga kita buat ketika mengisi parameter
+
+      const say = function (name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      };
+
+      say("Eko");
+      say("Budi");
+
+      //Anonymous Function di Parameter
+      function giveMeName(callback) {
+        callback("Eko");
+      }
+
+      giveMeName(say); //FUNCTION TANPA NAMA
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+    </script>
+  </body>
+</html>

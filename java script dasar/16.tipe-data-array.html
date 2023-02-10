@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+<script>
+    // Array ada tipe data yang berisi beberapa nilai
+    //Array di JavaScript memiliki sifat dinamis, artinya datanya bisa bertambah dengan sendirinya saat kita memasukkan data ke dalam Array
+    //urutan atau index array dimulai dari 0 sama dengan bahasa pemrograman lainnya, data apapun didalam array bisa dimasukan kedalam array
+
+    //CATATAN
+    //array.push(value)       //Menambah data ke Array
+    //array.length            //Untuk mendapatkan panjang Array
+    //array[index]            //Mendapat data di posisi index
+    //array[index] = value    //Mengubah data di posisi index
+    //delete array[index]     //Menghapus data di posisi index, namun index tidak bergeser
+
+    let arrayKosong = [];
+
+    let arrayNama = ["Eko", "Kurniawan", "Khannedy"];
+
+    const names = [];
+
+    names.push("Eko"); // INI DUGANAKAN UNTUK MENAMBAH DATA DIDALAM ARRAY
+    names.push("Kurniawan", "Khannedy");
+    names.push("Budi", "Joko", "Rudi");
+
+    console.table(names);  //Memberitahu informasi didalam table
+
+    console.info(names[0]);
+    console.info(names[1]);
+    console.info(names[2]);
+
+    names[0] = "Programmer"; //Mendapat data di posisi index
+    names[1] = "Zaman";
+    names[2] = "Now";
+
+    console.table(names);
+
+    delete names[3]; //Menghapus data di posisi index, namun index tidak bergeser
+
+    console.table(names);
+
+    names.push("Eko Lagi");
+
+    console.table(names);
+
+    names[3] = "Diubah Lagi";
+    names.push(1,2,3,4,5);
+    names.push(["Eko", "Kurniawna", "Khannedy"]);
+
+    console.table(names);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Field</title>
+</head>
+<body>
+<script>
+// static adalah kata kunci yang bisa kita tambahkan sebelum field atau method,
+// biasannya ketika kita membuat field atau method, maka secara otomatis field akan 
+// menjadi property di instance object, dan method akan menjadi function di prototype
+// Jika kita tambahkan static, maka hal itu tidak terjadi
+
+    class Configuration {
+        static name = "Belajar JavaScript OOP";
+        static version = 1.0;
+        static author = "Eko Kurniawan"
+    }
+
+    const config = new Configuration();
+    console.info(config);
+
+    Configuration.author = "Eko Khannedy";
+
+    console.info(Configuration.name);
+    console.info(Configuration.version);
+    console.info(Configuration.author);
+    
+// Jika kita tambahkan static dalam class field, secara otomatis field tersebut bukan lagi milik instance object,
+//  melainkan milik class nya itu sendiri
+// Biasanya static digunakan jika kita ingin membuat utility field atau function
+// Cara mengakses static class field pun tidak lagi lewat object, melainkan lewat class nya
+// Static class field bisa diartikan sifatnya global, tidak peduli diakses dimana atau siapa yang mengakses,
+// hasilnya akan sama
+
+</script>
+</body>
+</html>

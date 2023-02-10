@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Handling</title>
+</head>
+<body>
+<script>
+
+// Saat terjadi error di kode program JavaScript, kadang kita tidak ingin program kita berhenti
+// Di JavaScript, kita bisa menangkap jika terjadi error
+// Kita bisa menggunakan try catch statement untuk menangkap error
+// Pada block try, kita akan mencoba mengakses kode program yang bisa menyebabkan error, dan jika terjadi error, 
+// block try akan berhenti dan otomatis masuk ke block catch
+// Jika tidak terjadi error, block catch tidak akan dieksekusi
+
+    class MathUtil {
+
+        static sum(...numbers) {
+
+            if (numbers.length === 0) {
+                throw new Error("Total parameter harus lebih dari 0");
+            }
+
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+            return total;
+        }
+
+    }
+
+    try {
+        console.info(MathUtil.sum());
+        console.info("Eko");
+    } catch (error) {
+        console.info(`Terjadi error : ${error.message}`);
+    } finally {
+        console.info("Program selesai");
+    }
+
+    console.info("Khannedy");
+
+    class Counter {
+
+        #counter = 1;
+
+        next() {
+            try {
+                return this.#counter;
+            } finally {
+                this.#counter++;
+            }
+        }
+
+// Kadang kita ingin melakukan sesuatu entah itu terjadi error ataupun tidak
+// Dalam try catch, kita bisa menambahkan block finally
+// Block finally ini akan selalu dieksekusi setelah try catch selesai, entah terjadi error atau tidak, 
+// block finally akan selalu dieksekusi
+
+// Kata kunci finally juga bisa digunakan tanpa perlu menggunakan catch 
+// Biasanya ini digunakan dalam kasus tertentu
+
+    }
+
+    const counter = new Counter();
+    console.info(counter.next());
+    console.info(counter.next());
+    console.info(counter.next());
+    console.info(counter.next());
+    console.info(counter.next());
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+<script>
+
+    //Tipe data object adalah tipe data yang mirip dengan tipe data Array
+    //Yang membedakan adalah index pada tipe data object bisa menggunakan string
+    //Index di object biasanya disebut attributes atau properties, bukan index
+
+
+    const orang = {
+        "nama lengkap" : "Eko Kurniawan", //JIKA INGIN MENAMBAHKAN SPASI DI KEY nya KITA PERLU MENAMBAHKAN TANDA PETIK DUA ("")
+        alamat: "Indonesia",
+        umur: 30
+    };
+
+    // ubah property / attribute
+    // person["nama"] = "Eko Kurniawan";
+    // person["alamat"] = "Indonesia";
+    // person["umur"] = 30;
+
+    console.info(`Nama : ${orang["nama lengkap"]}`); //Mengakses property object
+    console.info(`Alamat : ${orang.alamat}`);
+    console.info(`Umur : ${orang.umur}`);
+
+    console.table(orang);
+
+    delete orang["umur"];
+
+    console.table(orang);
+
+</script>
+</body>
+</html>

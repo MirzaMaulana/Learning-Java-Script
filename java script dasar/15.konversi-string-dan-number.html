@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+<script>
+    //KONVERSI STRING DAN NUMBER
+    //saat membuat aplikasi kita butuh input dari pengguna selalu dalam bentuk string
+    //sedangkan kita ingin mengelolanya dalam bentuk NUMBER
+    //maka sangat disarankan untuk melakukan konversi tipe data
+
+    const value1 = parseInt("1");
+    const value2 = 1;
+    const sum = value1 + value2;
+
+    document.writeln(`<p>${sum}</p>`)
+
+    document.writeln(`<p>${parseInt("1.9")}</p>`) //parseInt(string) Mengkonversi dari string ke number (bilangan bulat)
+
+    document.writeln(`<p>${parseFloat("1.1")}</p>`) //Mengkonversi dari string ke number (bilangan pecahan)
+
+    document.writeln(`<p>${Number("1.1")}</p>`) //Mengkonversi dari string ke number (bilangan bulat atau pecahan)
+
+                                                //Mengkonversi dari number ke String
+    const a = 1;
+    const b = 1;
+    const total = a.toString() + b.toString();
+    document.writeln(`<p>${total}</p>`);
+
+
+    document.writeln(`<p>${parseInt("1salah")}</p>`)
+    document.writeln(`<p>${parseFloat("1.1eko")}</p>`)
+
+    //Bagaimana jika ternyata data string yang kita coba konversi ke number bukanlah data yang valid?
+    //Jika data string yang kita coba lakukan konversi bukan lah data valid, maka hasil dari konversi tersebut adalah NaN (Not a Number)
+    //NaN adalah number spesial yang menyebutkan bahwa ini bukanlah number
+    //Jika NaN dioperasikan dengan data number lainnya, maka hasilnya akan menjadi NaN lagi
+
+    document.writeln(`<p>${Number("1salah")}</p>`)
+    document.writeln(`<p>${Number("1.1eko")}</p>`)
+    document.writeln(`<p>${Number("salah")}</p>`)
+
+    const first = Number("salah"); // NaN
+    const totalNumber = first + 100;
+    document.writeln(`<p>${totalNumber}</p>`);
+
+    document.writeln(`<p>${isNaN(first)}</p>`); //mengecek apakah Nan atau bukan
+    document.writeln(`<p>${isNaN(100)}</p>`);
+    document.writeln(`<p>${isNaN(NaN)}</p>`);
+
+</script>
+</body>
+</html>

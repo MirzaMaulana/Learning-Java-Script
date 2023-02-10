@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Property</title>
+</head>
+<body>
+<script>
+    // Sama seperti pada constructor function, dalam class pun kita bisa menambahkan property
+    // Karena hasil akhirnya adalah sebuah object, jadi menambahkan property di class bisa juga dilakukan
+    // di instance object nya
+
+    class Person {
+
+        constructor(name) {
+            this.name = name;
+        }
+
+    }
+
+    const eko = new Person("Eko");
+    console.info(eko);
+    console.info(eko.name);
+
+    const budi = new Person("Budi");
+
+</script>
+</body>
+</html>

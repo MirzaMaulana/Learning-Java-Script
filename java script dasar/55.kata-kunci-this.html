@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kata Kunci this</title>
+  </head>
+  <body>
+    <script>
+      // Kata kunci this adalah referensi ke object milik siapa
+      // Tiap lokasi kata kunci this, bisa berbeda-beda referensi pemilik nya
+      // Dalam Object Method, this merupakan referensi ke object pemilik function nya
+      // Di global scope, this merupakan referensi ke global object (di browser biasanya Window)
+      // Dalam function, this merupakan referensi ke global object (di browser biasanya Window)
+      // Di function dengan strict mode (akan dibahas nanti), this adalah undefined
+      // Dalam event, this merupakan referensi ke element yang menerima event (dibahas di materi Document Object Model)
+
+      // console.info(this);
+
+      // function sample(){
+      //     console.info(this);
+
+      //     function inner(){
+      //         console.info(this);
+      //     }
+
+      //     inner();
+      // }
+
+      // sample();
+
+      // const person = {
+      //     name: "Eko",
+      //     sayHello: function (value){
+      //         console.info(`Hello ${value} My Name is ${this.name}`);
+      //     }
+      // };
+
+      // person.sayHello("Budi");
+      // person.sayHello("Joko");
+
+      //angkot 1 sandhika galih cicaheum-cibiru penumpang kosong kas 0
+      function Angkot(sopir, trayek, penumpang, kas) {
+        this.sopir = sopir;
+        this.trayek = trayek;
+        this.penumpang = penumpang;
+        this.kas = kas;
+
+        this.penumpangNaik = function (namaPenumpang) {
+          this.penumpang.push(namaPenumpang);
+          return this.penumpang;
+        };
+      }
+      const angkot1 = new Angkot("Mirza", ["Solo", "Wonogiri"], [], 0);
+      const angkot2 = new Angkot("Budi", ["Solo", "Jatipuro"], [], 0);
+    </script>
+  </body>
+</html>

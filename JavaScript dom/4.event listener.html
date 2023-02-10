@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event World</title>
+
+    <style>
+      .contents {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid black;
+        padding: 15px;
+      }
+
+      #generateButton {
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents" align="center" hidden>
+      <button id="incrementButton">Tekan Aku :)</button>
+      <h3>
+        Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span>
+      </h3>
+      <!-- <img
+        src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Meme-HD-Wallpaper.jpg"
+        align="center"
+        alt=""
+        width="600"
+      /> -->
+    </div>
+
+    <script>
+      // Kode JavaScript kita
+      function welcome() {
+        alert("Sim salabim muncullah elemen-elemen HTML!");
+        const contents = document.querySelector(".contents");
+        contents.removeAttribute("hidden");
+      }
+      document.body.onload = welcome;
+      //   ketika tombol diklik maka tambahkan nilai 1
+      function increment() {
+        const angka = document.getElementById("count").innerText++;
+      }
+      document.getElementById("incrementButton").onclick = increment;
+      //ketika button diclick 7 kali maka tampilkan pesan ini
+      if (document.getElementById("count").innerText == 7) {
+        const hiddenMessage = document.createElement("h4");
+        hiddenMessage.innerText =
+          "Selamat! Anda menemukan hadiah tersembunyi...";
+        const image = document.createElement("img");
+        image.setAttribute(
+          "src",
+          "https://pics.me.me/meme-profile-pictures-50433968.png"
+        );
+        const contents = document.querySelector(".contents");
+        contents.appendChild(hiddenMessage).appendChild(image);
+      }
+    </script>
+  </body>
+</html>
